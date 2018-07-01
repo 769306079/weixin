@@ -30,6 +30,7 @@ public class WeiXinController {
         if (signature != null && timestamp != null && nonce != null) {
             boolean b = WeiXinUtlis.checkSignature(signature, timestamp, nonce);
             if (b) {
+                System.out.println("---");
                 return echostr;
             }
         }
